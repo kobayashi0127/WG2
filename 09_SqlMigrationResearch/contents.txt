@@ -1,0 +1,7 @@
+- SQL移行調査編
+-- 09_SqlMigrationResearch.odt
+-- 09_SqlMigrationResearch.pdf
+
+- 別紙:SQL差異表
+-- 09_Appendix_SqlComparison.ods
+-- 09_Appendix_SqlComparison.pdf
