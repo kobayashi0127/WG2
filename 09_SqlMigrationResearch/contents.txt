@@ -1,7 +1,7 @@
-- SQL$B0\9TD4::JT(B
+- SQL移行調査編
 -- 09_SqlMigrationResearch.odt
 -- 09_SqlMigrationResearch.pdf
 
-- $BJL;f(B:SQL$B:90[I=(B
+- 別紙:SQL差異表
 -- 09_Appendix_SqlComparison.ods
 -- 09_Appendix_SqlComparison.pdf
