@@ -1,0 +1,3 @@
+/home/postgres/b4/src/com/commander4j/app/JInternalFrameLocationAdmin.java:297:0:"このまま移行する場合、引数のデータ型の確認が必要です。なぜなら、Oracleはデータ型がCHAR の場合、後続空白が含まれて変換されますが、PostgreSQLでは後続空白が含まれないためです。また、戻り値の型もOracleは引数の型なのに対し、PostgreSQLではtext型固定のため注意が必要です。"
+/home/postgres/b4/src/com/commander4j/app/JInternalFrameMHNAdmin.java:314:0:"このまま移行する場合、引数のデータ型の確認が必要です。なぜなら、Oracleはデータ型がCHAR の場合、後続空白が含まれて変換されますが、PostgreSQLでは後続空白が含まれないためです。また、戻り値の型もOracleは引数の型なのに対し、PostgreSQLではtext型固定のため注意が必要です。"
+/home/postgres/b4/src/com/commander4j/app/JInternalFrameMaterialAdmin.java:307:0:"このまま移行する場合、引数のデータ型の確認が必要です。なぜなら、Oracleはデータ型がCHAR の場合、後続空白が含まれて変換されますが、PostgreSQLでは後続空白が含まれないためです。また、戻り値の型もOracleは引数の型なのに対し、PostgreSQLではtext型固定のため注意が必要です。"

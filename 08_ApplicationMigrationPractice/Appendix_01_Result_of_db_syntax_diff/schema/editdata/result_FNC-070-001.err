@@ -1,0 +1,1 @@
+/home/postgres/b4/xml/schema/org.postgresql.jdbc.driver.PostgreSQLDriver/000059.xml:1:112:"このまま移行する場合、引数のデータ型の確認が必要です。なぜなら、Oracleは変換対象文字列のデータ型がCHAR の場合、変換文字列に後続空白が含まれ、PostgreSQLでは後続空白が含まれないためです。"

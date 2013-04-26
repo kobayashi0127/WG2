@@ -1,0 +1,7 @@
+FNC-086-001,FUNC,LOW2,"SYSDATE関数は未サポートです。",3
+FNC-099-001,FUNC,WARNING,"このまま移行する場合、引数のデータ型の確認が必要です。なぜなら、Oracleはデータ型がCHAR の場合、後続空白が含まれて変換されますが、PostgreSQLでは後続空白が含まれないためです。また、戻り値の型もOracleは引数の型なのに対し、PostgreSQLではtext型固定のため注意が必要です。",3
+SQL-097-001,SQL,ERROR LV4,"RENAME文は未サポートです。",4
+SQL-107-008,SQL,LOW2,"FROMの省略は未サポートです。",24
+SQL-118-002,SQL,ERROR LV1,"全列指定は未サポートです。SELECT句にすべてのカラム名を指定してください。",1
+SQL-118-026,SQL,LOW1,"ROWNUM擬似列は未サポートです。",1
+SQL-119-001,SQL,WARNING,"user_commentのデータ・ディクショナリ・ビューまたは動的パフォーマンス・ビューを参照しているため、修正が必要です。",8

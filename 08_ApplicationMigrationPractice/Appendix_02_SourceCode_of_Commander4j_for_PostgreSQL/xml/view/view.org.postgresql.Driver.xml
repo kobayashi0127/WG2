@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE SQL SYSTEM "view.dtd"> 
+<SQL>
+	<jdbcDriver Type="org.postgresql.Driver">
+		<?VIEWS ?>
+		<statement>
+			<id>view_group_permissions</id>
+			<text>(select p.group_id,m.* from {schema}sys_group_permissions p, {schema}sys_modules m where m.module_id = p.module_id)</text>
+		</statement>
+		<statement>
+			<id>view_menu_structure</id>
+			<text>(select sys_menus.*, sys_modules.resource_key, sys_modules.rf_active, sys_modules.dk_active, sys_modules.module_type, sys_modules.hint, sys_modules.icon_filename from {schema}sys_menus, {schema}sys_modules where sys_modules.module_id = sys_menus.module_id)</text>
+		</statement>
+		<statement>
+			<id>view_toolbar</id>
+			<text>(select sys_toolbar.*, sys_modules.resource_key, sys_modules.rf_active, sys_modules.dk_active, sys_modules.module_type, sys_modules.hint, sys_modules.icon_filename from {schema}sys_toolbar, {schema}sys_modules where sys_modules.module_id = sys_toolbar.module_id)</text>
+		</statement>
+		<statement>
+			<id>view_rf_menu</id>
+			<text>(select sys_rf_menu.*, sys_modules.resource_key, sys_modules.rf_active, sys_modules.dk_active, sys_modules.module_type, sys_modules.hint, sys_modules.icon_filename from {schema}sys_rf_menu, {schema}sys_modules where sys_modules.module_id = sys_rf_menu.module_id)</text>
+		</statement>
+		<statement>
+			<id>view_security</id>
+			<text>(select sugm.user_id,sgp.module_id from {schema}sys_user_group_membership sugm, {schema}sys_group_permissions sgp where sgp.group_id = sugm.group_id)</text>
+		</statement>
+		<statement>
+			<id>view_pallet_expiry</id>
+			<text>view_pallet_expiry</text>
+		</statement>
+		<statement>
+			<id>view_pallet_history_expiry</id>
+			<text>(select p.*,b.expiry_date,m.description from {schema}app_pallet_history p, {schema}app_material_batch b, {schema}app_material m where b.material = p.material and b.batch_number = p.batch_number and m.material = p.material)</text>
+		</statement>
+		<statement>
+			<id>view_pallet_history</id>
+			<text>(select p.* from {schema}app_pallet_history p) as a</text>
+		</statement>
+	</jdbcDriver>
+</SQL>

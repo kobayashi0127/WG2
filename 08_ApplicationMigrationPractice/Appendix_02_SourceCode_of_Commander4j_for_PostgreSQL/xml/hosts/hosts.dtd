@@ -1,0 +1,22 @@
+<?xml encoding="UTF-8"?>
+<!ELEMENT Hosts ((NumberOfSites, Site+))>
+<!ELEMENT Site (Enabled, UniqueID, Description, URL, DatabaseDriver,DatabaseParameters)>
+<!ATTLIST Site Number CDATA #REQUIRED>
+<!ELEMENT NumberOfSites (#PCDATA)>
+<!ELEMENT Enabled (#PCDATA)>
+<!ELEMENT UniqueID (#PCDATA)>
+<!ELEMENT Description (#PCDATA)>
+<!ELEMENT URL (#PCDATA)>
+<!ELEMENT jdbcDriver (#PCDATA)>
+<!ELEMENT jdbcUsername (#PCDATA)>
+<!ELEMENT jdbcPassword (#PCDATA)>
+<!ELEMENT jdbcDatabase (#PCDATA)>
+<!ELEMENT jdbcDatabaseSchema (#PCDATA)>
+<!ELEMENT jdbcConnectString (#PCDATA)>
+<!ELEMENT jdbcServer (#PCDATA)>
+<!ELEMENT jdbcPort (#PCDATA)>
+<!ELEMENT jdbcSID (#PCDATA)>
+<!ELEMENT jdbcDatabaseDateTimeToken (#PCDATA)>
+<!ELEMENT jdbcDatabaseSelectLimit (#PCDATA)>
+<!ELEMENT DatabaseParameters (jdbcUsername, jdbcPassword, jdbcServer, jdbcPort, jdbcSID,jdbcDatabase)>
+<!ELEMENT DatabaseDriver (jdbcDriver, jdbcConnectString, jdbcDatabaseDateTimeToken, jdbcDatabaseSelectLimit,jdbcDatabaseSchema)>

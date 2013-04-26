@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE DDL SYSTEM "schema.dtd">
+<DDL>
+
+
+<statement>
+ALTER TABLE app_pallet_history ALTER user_id TYPE VARCHAR(20)
+</statement>
+
+<statement>
+ALTER TABLE sys_user_group_membership ALTER user_id TYPE VARCHAR(20)
+</statement>
+
+<statement>
+ALTER TABLE sys_users ALTER user_id TYPE VARCHAR(20)
+</statement>
+
+</DDL>

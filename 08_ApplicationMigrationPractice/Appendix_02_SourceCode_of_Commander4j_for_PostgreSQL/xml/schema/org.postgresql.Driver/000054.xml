@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE DDL SYSTEM "schema.dtd">
+<DDL>
+
+<statement>
+  CREATE TABLE APP_QM_ACTIVITY 
+   (	INSPECTION_ID VARCHAR(20) NOT NULL, 
+	ACTIVITY_ID VARCHAR(10) NOT NULL, 
+	DESCRIPTION VARCHAR(50), 
+	EXTENSION_ID INT, 
+	 CONSTRAINT APP_QM_ACTIVITY_PK PRIMARY KEY (INSPECTION_ID, ACTIVITY_ID)
+   )
+</statement>
+
+<statement>
+  CREATE TABLE APP_QM_DICTIONARY 
+   (	TEST_ID VARCHAR(50) NOT NULL, 
+	FIELD_ALIGNMENT INT, 
+	DESCRIPTION VARCHAR(50), 
+	DATATYPE VARCHAR(15), 
+	UOM VARCHAR(10), 
+	REQUIRED VARCHAR(1), 
+	SELECT_LIST_ID VARCHAR(20), 
+	VISIBLE VARCHAR(1), 
+	EXTENSION_ID INT, 
+	FIELD_WIDTH INT, 
+	FIELD_MAX_CHARS INT, 	
+	 CONSTRAINT APP_QM_DICTIONARY_PK PRIMARY KEY (TEST_ID)
+   )
+</statement>
+
+<statement>
+  CREATE TABLE APP_QM_DICTIONARY_GROUP 
+   (	GROUP_ID VARCHAR(20) NOT NULL, 
+	TEST_ID VARCHAR(50) NOT NULL, 
+	ACCESS VARCHAR(20), 
+	 CONSTRAINT APP_QM_DICTIONARY_GROUP_PK PRIMARY KEY (GROUP_ID, TEST_ID)
+   )
+</statement>
+
+<statement>
+  CREATE TABLE APP_QM_EXTENSION 
+   (	EXTENSION_ID INT NOT NULL, 
+	LINKED_TABLE VARCHAR(50) NOT NULL, 
+	FIELDNAME VARCHAR(50) NOT NULL, 
+	VALUE VARCHAR(50), 
+	 CONSTRAINT APP_QM_EXTENSION_PK PRIMARY KEY (EXTENSION_ID, LINKED_TABLE, FIELDNAME)
+   )
+</statement>
+
+<statement>
+  CREATE TABLE APP_QM_INSPECTION 
+   (	INSPECTION_ID VARCHAR(20) NOT NULL, 
+	EXTENSION_ID INT, 
+	DESCRIPTION VARCHAR(50), 
+	 CONSTRAINT APP_QM_INSPECTION_PK PRIMARY KEY (INSPECTION_ID)
+   )
+</statement>
+
+<statement>
+  CREATE TABLE APP_QM_RESULT 
+   (	SAMPLE_ID INT NOT NULL, 
+	TEST_ID VARCHAR(50), 
+	VALUE VARCHAR(50), 
+	UPDATED TIMESTAMP, 
+	USER_ID VARCHAR(20), 
+	STATUS VARCHAR(20), 
+	PROCESSED TIMESTAMP, 
+	 CONSTRAINT APP_QM_RESULT_PK PRIMARY KEY (SAMPLE_ID)
+   )
+</statement>
+
+<statement>
+  CREATE TABLE APP_QM_SAMPLE 
+   (	SAMPLE_ID INT NOT NULL, 
+	INSPECTION_ID VARCHAR(20), 
+	ACTIVITY_ID VARCHAR(10), 
+	SAMPLE_DATE TIMESTAMP, 
+	USER_ID VARCHAR(20), 
+	USER_DATA_1 VARCHAR(20), 
+	USER_DATA_2 VARCHAR(20), 
+	MATERIAL VARCHAR(20), 
+	PROCESS_ORDER VARCHAR(10), 
+	 CONSTRAINT APP_QM_SAMPLE_PK PRIMARY KEY (SAMPLE_ID)
+   )
+</statement>
+
+<statement>
+  CREATE TABLE APP_QM_SELECTLIST 
+   (	SELECT_LIST_ID VARCHAR(20) NOT NULL, 
+	VALUE VARCHAR(20) NOT NULL, 
+	DESCRIPTION VARCHAR(50), 
+	SEQUENCE INT, 
+	 CONSTRAINT APP_QM_SELECTLIST_PK PRIMARY KEY (SELECT_LIST_ID, VALUE)
+   )
+</statement>
+ 
+<statement>
+  CREATE TABLE APP_QM_TEST 
+   (	INSPECTION_ID VARCHAR(20) NOT NULL, 
+	ACTIVITY_ID VARCHAR(10) NOT NULL, 
+	TEST_ID VARCHAR(50) NOT NULL, 
+	SEQUENCE_ID INT, 
+	EXTENSION_ID INT, 	
+	 CONSTRAINT APP_QM_TEST_PK PRIMARY KEY (INSPECTION_ID, ACTIVITY_ID, TEST_ID)
+   )
+</statement>
+	
+<statement>
+	ALTER TABLE APP_PROCESS_ORDER add INSPECTION_ID varchar(20)
+</statement>	
+
+<statement>
+insert into sys_language (resource_key,language_id,text,mnemonic) values  ('lbl_Inspection_ID','EN','Inspection ID','')
+</statement>
+<statement>
+insert into sys_language (resource_key,language_id,text,mnemonic) values  ('lbl_Activity_ID','EN','Activity ID','')
+</statement>
+<statement>
+insert into sys_language (resource_key,language_id,text,mnemonic) values  ('lbl_Test_ID','EN','Test ID','')
+</statement>
+<statement>
+insert into sys_language (resource_key,language_id,text,mnemonic) values  ('lbl_Sample_ID','EN','Sample ID','')
+</statement>
+<statement>
+insert into sys_language (resource_key,language_id,text,mnemonic) values  ('lbl_Sample_Date','EN','Sample Date','')
+</statement>
+
+<statement>
+insert into sys_language (resource_key,language_id,text,mnemonic) values  ('lbl_Inspection_ID','NL','Inspectie ID','')
+</statement>
+<statement>
+insert into sys_language (resource_key,language_id,text,mnemonic) values  ('lbl_Activity_ID','NL','Activiteit ID','')
+</statement>
+<statement>
+insert into sys_language (resource_key,language_id,text,mnemonic) values  ('lbl_Test_ID','NL','Test ID','')
+</statement>
+<statement>
+insert into sys_language (resource_key,language_id,text,mnemonic) values  ('lbl_Sample_ID','NL','Voorbeeld ID','')
+</statement>
+<statement>
+insert into sys_language (resource_key,language_id,text,mnemonic) values  ('lbl_Sample_Date','NL','Voorbeeld datum','')
+</statement>
+
+<statement>
+insert into sys_language (resource_key,language_id,text,mnemonic) values  ('lbl_Inspection_ID','HU','Ellenőrzés ID','')
+</statement>
+<statement>
+insert into sys_language (resource_key,language_id,text,mnemonic) values  ('lbl_Activity_ID','HU','Tevékenység ID','')
+</statement>
+<statement>
+insert into sys_language (resource_key,language_id,text,mnemonic) values  ('lbl_Test_ID','HU','Teszt ID','')
+</statement>
+<statement>
+insert into sys_language (resource_key,language_id,text,mnemonic) values  ('lbl_Sample_ID','HU','Minta ID','')
+</statement>
+<statement>
+insert into sys_language (resource_key,language_id,text,mnemonic) values  ('lbl_Sample_Date','HU','Minta dátum','')
+</statement>
+
+<statement>
+insert into sys_language (resource_key,language_id,text,mnemonic) values  ('lbl_Inspection_ID','IT','Ispezione ID','')
+</statement>
+<statement>
+insert into sys_language (resource_key,language_id,text,mnemonic) values  ('lbl_Activity_ID','IT','Attività ID','')
+</statement>
+<statement>
+insert into sys_language (resource_key,language_id,text,mnemonic) values  ('lbl_Test_ID','IT','Prova ID','')
+</statement>
+<statement>
+insert into sys_language (resource_key,language_id,text,mnemonic) values  ('lbl_Sample_ID','IT','Campione ID','')
+</statement>
+<statement>
+insert into sys_language (resource_key,language_id,text,mnemonic) values  ('lbl_Sample_Date','IT','Campione Date','')
+</statement>
+	
+</DDL>

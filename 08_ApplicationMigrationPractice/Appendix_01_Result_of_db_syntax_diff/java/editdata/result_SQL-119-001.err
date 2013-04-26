@@ -1,0 +1,8 @@
+/home/postgres/b4/src/com/commander4j/app/JInternalFrameQMResultEnquiry.java:78:82:"User_Data_1のデータ・ディクショナリ・ビューまたは動的パフォーマンス・ビューを参照しているため、修正が必要です。"
+/home/postgres/b4/src/com/commander4j/app/JInternalFrameQMResultEnquiry.java:78:95:"User_Data_2のデータ・ディクショナリ・ビューまたは動的パフォーマンス・ビューを参照しているため、修正が必要です。"
+/home/postgres/b4/src/com/commander4j/app/JInternalFrameQMResultEnquiry.java:166:80:"USER_DATA_1のデータ・ディクショナリ・ビューまたは動的パフォーマンス・ビューを参照しているため、修正が必要です。"
+/home/postgres/b4/src/com/commander4j/app/JInternalFrameQMResultEnquiry.java:166:92:"USER_DATA_2のデータ・ディクショナリ・ビューまたは動的パフォーマンス・ビューを参照しているため、修正が必要です。"
+/home/postgres/b4/src/com/commander4j/db/JDBTable.java:83:7:"user_idのデータ・ディクショナリ・ビューまたは動的パフォーマンス・ビューを参照しているため、修正が必要です。"
+/home/postgres/b4/src/com/commander4j/db/JDBTable.java:83:15:"user_commentのデータ・ディクショナリ・ビューまたは動的パフォーマンス・ビューを参照しているため、修正が必要です。"
+/home/postgres/b4/src/com/commander4j/sys/JDialogLookup.java:112:7:"user_idのデータ・ディクショナリ・ビューまたは動的パフォーマンス・ビューを参照しているため、修正が必要です。"
+/home/postgres/b4/src/com/commander4j/sys/JDialogLookup.java:112:15:"user_commentのデータ・ディクショナリ・ビューまたは動的パフォーマンス・ビューを参照しているため、修正が必要です。"
